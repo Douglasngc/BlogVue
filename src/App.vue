@@ -2,7 +2,8 @@
   <navbar/>
   <img alt="Vue logo" src="./assets/logo.png">
   <hr><br>
-  <First msg="Welcome to Your Vue.js App"/>
+  <First />
+  
 <footers/>
 </template>
 
@@ -14,8 +15,11 @@ import First from './components/First.vue'
 export default {
   name: 'App',
   components: {
-    First,navbar,footers
+    First,
+    navbar,
+    footers
   }
+ 
 }
 
 </script>

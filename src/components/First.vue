@@ -1,8 +1,6 @@
 <template>
-  <div >
-    <p>Olá vue</p>
-    <h4>olá me chamo {{ namee }} e trabalho como {{ profisa }}</h4>
-
+  <div>
+  {{ nome }}
    
   </div>
 </template>
@@ -12,11 +10,11 @@ export default {
   name: 'FirstT',
   data() {
     return{
-      namee:'Ratoera',
-      profisa:"Developer"
+      
+      
+      nome: 'dg'
     }
-  }
-}
+  }}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

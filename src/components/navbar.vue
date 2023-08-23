@@ -5,21 +5,33 @@
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
-  <div class="dropdown" style="float:right;">
-  <button class="dropbtn">Login</button>
-  <div class="dropdown-content">
-  <a href="#">Entrar</a>
-  
+  <div v-if="isLogged" key="sucesss">
+  <button v-on:click.prevent="toggleLogin" style="float:right;" class="dropbtn">Fazer logout</button>
   </div>
-</div>
+
+<button v-on:click.prevent="toggleLogin" style="float:right;" class="dropbtn" v-else key="error">Fazer login</button>
 </ul>
 </template>
 
 <script>
 export default {
-    name: 'navbarR'
+    name: 'navbarR',
+  data() {
+    return{
+      
+      isLogged: false,
+      nome: 'dg'
+    }
+  },
+  methods:{
+    toggleLogin(){
+      this.isLogged = !this.isLogged;
+    }
 
-}
+  }
+  }
+
+
 </script>
 
 <style>
@@ -30,10 +42,7 @@ ul {
   overflow: hidden;
   background-color: #333;
 }
-.test{
-    text-color:white;
-    
-}
+
 li {
   float: left;
 }
