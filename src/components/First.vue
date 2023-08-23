@@ -1,14 +1,20 @@
 <template>
-  <div class="hello">
-   olá Vue
+  <div >
+    <p>Olá vue</p>
+    <h4>olá me chamo {{ namee }} e trabalho como {{ profisa }}</h4>
+
+   
   </div>
 </template>
 
 <script>
 export default {
   name: 'FirstT',
-  props: {
-    msg: String
+  data() {
+    return{
+      namee:'Ratoera',
+      profisa:"Developer"
+    }
   }
 }
 </script>
